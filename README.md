@@ -35,3 +35,5 @@ console.assert(
 global.btoa = str => Buffer.from(str).toString('base64');
 global.atob = str => Buffer.from(str, 'base64').toString();
 ```
+
+Looking for a drop in module that converts into utf-16 strings instead? Check [uint8-to-utf16](https://github.com/WebReflection/uint8-to-utf16#readme) out!
