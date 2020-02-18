@@ -12,13 +12,13 @@ import {encode, decode} from 'uint8-to-base64';
 
 const utf8Binary = new Uint8Array(anyArrayBuffer);
 
-// pack converts Uint8Array instances to utf-16 strings
+// encode converts Uint8Array instances to utf-16 strings
 const encoded = encode(utf8Binary);
 
 // it's just like any other strings
 console.log(encoded);
 
-// unpack converts utf-16 strings, encoded via this module,
+// decode converts utf-16 strings, encoded via this module,
 // into their original Uint8Array representation
 const decoded = decode(encoded);
 
