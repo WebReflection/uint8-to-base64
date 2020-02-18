@@ -1,7 +1,7 @@
 {
   "name": "uint8-to-base64",
   "version": "0.0.0",
-  "description": "",
+  "description": "A safe Uint8Array to base64 string converter",
   "main": "cjs/index.js",
   "scripts": {
     "build": "npm run cjs && npm run rollup:new && npm run rollup:babel && npm run min && npm run test",
@@ -12,8 +12,15 @@
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
     "test": "nyc node test/index.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "Uint8Array",
+    "base64",
+    "conversion",
+    "safe",
+    "encode",
+    "decode"
+  ],
+  "author": "Andrea Giammarchi",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.8.4",
@@ -28,5 +35,13 @@
     "uglify-js": "^3.7.7"
   },
   "module": "esm/index.js",
-  "unpkg": "min.js"
+  "unpkg": "min.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebReflection/uint8-to-base64.git"
+  },
+  "bugs": {
+    "url": "https://github.com/WebReflection/uint8-to-base64/issues"
+  },
+  "homepage": "https://github.com/WebReflection/uint8-to-base64#readme"
 }
