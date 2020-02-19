@@ -1,22 +1,28 @@
 var uint8ToBase64 = (function (exports) {
-	'use strict';
+  'use strict';
 
-	var fromCharCode = String.fromCharCode;
-	var encode = function encode(uint8array) {
-	  return btoa(fromCharCode.apply(null, uint8array));
-	};
+  var fromCharCode = String.fromCharCode;
+  var encode = function encode(uint8array) {
+    var output = [];
 
-	var asCharCode = function asCharCode(c) {
-	  return c.charCodeAt(0);
-	};
+    for (var i = 0, length = uint8array.length; i < length; i++) {
+      output.push(fromCharCode(uint8array[i]));
+    }
 
-	var decode = function decode(chars) {
-	  return Uint8Array.from(atob(chars), asCharCode);
-	};
+    return btoa(output.join(''));
+  };
 
-	exports.decode = decode;
-	exports.encode = encode;
+  var asCharCode = function asCharCode(c) {
+    return c.charCodeAt(0);
+  };
 
-	return exports;
+  var decode = function decode(chars) {
+    return Uint8Array.from(atob(chars), asCharCode);
+  };
+
+  exports.decode = decode;
+  exports.encode = encode;
+
+  return exports;
 
 }({}));
