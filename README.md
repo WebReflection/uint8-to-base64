@@ -29,7 +29,7 @@ console.assert(
 );
 ```
 
-**Please note** this module requires global `atob` and `btoa` in NodeJS, polyfilled in tests in here as such.
+**Please note** this module requires global `atob` and `btoa` in NodeJS **< 16**, polyfilled in old tests in here as such.
 
 ```js
 global.btoa = str => Buffer.from(str).toString('base64');

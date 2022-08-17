@@ -1,6 +1,3 @@
-global.btoa = str => Buffer.from(str).toString('base64');
-global.atob = str => Buffer.from(str, 'base64').toString();
-
 const {encode, decode} = require('../cjs');
 
 const even = new Uint8Array([0, 1, 2, 3]);
