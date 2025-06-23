@@ -1,1 +1,1 @@
-var uint8ToBase64=function(r){"use strict";function n(r){return r.charCodeAt(0)}var e=String.fromCharCode;return r.decode=function(r){return Uint8Array.from(atob(r),n)},r.encode=function(r){for(var n=[],t=0,o=r.length;t<o;t++)n.push(e(r[t]));return btoa(n.join(""))},r}({});
+var uint8ToBase64=(r=>{function n(r){return r.charCodeAt(0)}var e=String.fromCharCode;return r.decode=function(r){return Uint8Array.from(atob(r),n)},r.encode=function(r){for(var n=[],o=0,t=r.length;o<t;o++)n.push(e(r[o]));return btoa(n.join(""))},r})({});
